@@ -591,28 +591,50 @@
                 <p class="modal-title">
                     Оставьте свои данные, мы вам перезвоним
                 </p>
-                
-                <input type="text" class="modal-input">
-
+                <form class="modal-input-form">
+                    <input
+                        type="text"
+                        class="modal-input"
+                        name="name"
+                        placeholder="Введите Ваше имя"
+                        required
+                        minlength="2"
+                        title="Введите Ваше имя"
+                    />
                     <!-- <svg class="modal_icon" width="12" height="12">
                         <use href="images/symbol-defs.svg#name-icon"></use>
                     </svg> -->
-
-                <input type="text" class="modal-input" />
-
+                    <input
+                        type="tel"
+                        class="modal-input"
+                        name="tel"
+                        placeholder="Введите номер телефона"
+                        required
+                        title="+380 97 1111111"
+                        pattern="[\+]\d{3}\s\d{2}\s\d{3}\d{2}\d{2}"
+                        minlength="12"
+                        maxlength="19"
+                    />
                     <!-- <svg class="modal_icon" width="12" height="12">
                         <use href="images/symbol-defs.svg#tel-icon"></use>
                     </svg> -->
-
-                <input type="text" class="modal-input" />
-
+                    <input
+                        type="email"
+                        class="modal-input"
+                        name="email"
+                        placeholder="Введите почту"
+                        title="Введите Ваш email"
+                    />
                     <!-- <svg class="modal_icon" width="12" height="12">
                         <use href="images/symbol-defs.svg#mail-icon"></use>
                     </svg> -->
-                <input type="text" class="modal-input" placeholder="Введите текст"/>
-
-
-                <button class="modal_btn" type="submit">Отправить</button>
+                    <input
+                        type="text"
+                        class="modal-input coment"
+                        placeholder="Дополнительно"
+                        title="Введите Ваш коментарий"
+                    />
+                    <button class="modal_btn" type="submit">Отправить</button>
                 </form>
             </div>
         </div>

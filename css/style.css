@@ -666,7 +666,7 @@ button.current {
     height: 30px;
     border-radius: 50%;
     background-color: transparent;
-    border-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);    
 }
 
 .modal-close-icon {
@@ -674,7 +674,12 @@ button.current {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    fill: #000000;
+    fill: var(--main-color);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    fill: #188ce8;
 }
 
 .is-hidden {
@@ -703,8 +708,35 @@ button.current {
     padding-left: 15px;
 }
 
+.modal-input:valid {
+    border-color: rgb(13, 182, 8);  
+}
+
+.modal-input:invalid {
+    border-color: rgb(219, 6, 6);  
+}
+
+/* .modal-input::placeholder {
+    border-color: rgba(33, 33, 33, 0.2);
+} */
+
+.modal-input:placeholder-shown {
+    border-color: rgba(33, 33, 33, 0.2);
+}
+
+.modal-input-form :hover,
+.modal-input-form :focus,
+.modal-input-form :active {
+    cursor:pointer;    
+    border: 1px solid rgb(33, 149, 243, 1);  
+}
+
+.coment {
+    height: 120px;
+}
+
 .modal_btn {
-    display: block;
+    display:block;
     width: 200px;
     height: 50px;
     background: var(--brend-color);
