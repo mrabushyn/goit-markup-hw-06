@@ -709,8 +709,8 @@ button.current {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
-    margin-bottom: 10px;
-    padding-left: 15px;
+    
+    padding-left: 40px;
 }
 
 .modal-input:valid {
@@ -729,21 +729,21 @@ button.current {
     border-color: rgba(33, 33, 33, 0.2);
 }
 
-.modal-input-form :hover,
-.modal-input-form :focus,
-.modal-input-form :active {
+.modal-label + .modal-input:hover,
+.modal-label + .modal-input :focus,
+.modal-label + .modal-input :active {
     cursor:pointer;    
     border: 1px solid rgb(33, 149, 243, 1);  
 }
 
-.coment {    
-    height: 120px;    
-}
-
-.coment:placeholder-shown {
-    top: 0;
-    ;
-    
+.modal-text {
+    width: 448px;;
+    height: 120px;;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding-left: 15px;
 }
 
 .modal_btn {
@@ -761,4 +761,16 @@ button.current {
     letter-spacing: 0.06em;
     color: var(--light-color);    
     margin: 0 auto;
+}
+
+.modal-field {
+    position: relative;    
+    margin-bottom: 10px;
+}
+
+.modal_icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    
 }
