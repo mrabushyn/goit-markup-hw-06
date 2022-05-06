@@ -591,7 +591,9 @@
                 <p class="modal-title">
                     Оставьте свои данные, мы вам перезвоним
                 </p>
+
                 <form class="modal-input-form">
+
                     <div class="modal-field">
                         <label for="user-name" class="modal-label">Имя</label>
                         <input
@@ -607,38 +609,40 @@
                             <use href="images/symbol-defs.svg#name-icon"></use>
                         </svg>
                     </div>
+
                     <div class="modal-field">
-                        <label for="user-tel" class="modal-label"
-                            >Телефон</label
-                        >
+                        <label for="user-tel" class="modal-label">Телефон</label>
                         <input
                             type="tel"
                             class="modal-input"
                             name="tel"
                             required
-                            title="формат ввода+380 97 1111111"
-                            pattern="[\+]\d{3}\s\d{2}\s\d{3}\d{2}\d{2}"
-                            minlength="12"
-                            maxlength="19"
+                            title="+380 971111111"
+                            pattern="[\+]\d{3}\s\d{9}"
+                            minlength="14"
+                            maxlength="14"
                             id="user-tel"
+                            value="+380 "
                         />
                         <svg class="modal_icon" width="18" height="18">
                             <use href="images/symbol-defs.svg#tel-icon"></use>
                         </svg>
                     </div>
+
                     <div class="modal-field">
-                        <label for="user-mail" class="modal-label">Почта</label>
+                        <label for="user-mail" class="modal-label ">Почта</label>
                         <input
                             type="email"
-                            class="modal-input"
+                            class="modal-input modal-input_not_required"
                             name="email"
                             title="Введите Ваш email"
-                            id="user-mail"
+                            id="user-mail"                                                       
                         />
                         <svg class="modal_icon" width="18" height="18">
                             <use href="images/symbol-defs.svg#mail-icon"></use>
                         </svg>
                     </div>
+
                     <div class="modal-field">
                         <label for="user-text" class="modal-label"
                             >Комментарий</label
@@ -648,6 +652,7 @@
                         id="user-text"
                         class="modal-text"
                         placeholder="Введите текст"
+                        minlength="1"
                         ></textarea>                                          
                     </div>
                     <button class="modal_btn" type="submit">Отправить</button>
