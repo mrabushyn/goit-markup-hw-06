@@ -578,6 +578,33 @@
                         </li>
                     </ul>
                 </div>
+                <div class="footer-sending footer-padding">
+                    <p class="footer-title">Подпишитесь на рассылку</p>
+                    <form class="footer-input-form">
+                        <div class="footer-modal-field">
+                            <label
+                                for="sending-mail"
+                                class="fotter-label"
+                            ></label>
+                            <input
+                                type="sending"
+                                class="fotter-input"
+                                name="sending mail"
+                                title="Введите Ваш E-mail"
+                                id="sending-mail"
+                                placeholder="E-mail"
+                            />
+                            <button class="footer-sending_btn" type="submit">
+                                Подписаться
+                                <svg class="footer-sendign-icon" width="24" height="24">
+                                <use
+                                    href="images/symbol-defs.svg#icon-send"
+                                ></use>
+                            </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </footer>
         <!-- ____________________________________BACKDROP_____________________________ -->
@@ -636,7 +663,7 @@
                             type="email"
                             class="modal-input modal-input_not_required"
                             name="email"
-                            title="Введите Ваш email"
+                            title="Введите Ваш E-mail"
                             id="user-mail"
                         />
                         <svg class="modal_icon" width="18" height="18">
@@ -656,18 +683,21 @@
                             minlength="1"
                         ></textarea>
                     </div>
+
                     <div class="modal-field">
                         <input
                             type="checkbox"
-                            class="modal-check"
+                            class="modal-check pf-hidden-title"
                             id="modal-check"
                             name="policy"
                             value="policy"
                         />
-                        <label 
-                        for="modal-check" 
-                        class="modal-check_text">Соглашаюсь с рассылкой и принимаю 
-                            <a href="" class="modal-check_text_link">Условия договора</a></label>
+                        <label for="modal-check" class="modal-check_text"
+                            >Соглашаюсь с рассылкой и принимаю
+                            <a href="" class="modal-check_text_link">
+                                Условия договора</a
+                            ></label
+                        >
                     </div>
                     <button class="modal_btn" type="submit">Отправить</button>
                 </form>

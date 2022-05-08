@@ -427,7 +427,7 @@ img {
 
 .footer-section > .container {
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .footer-logo-style {
@@ -479,10 +479,6 @@ img {
     margin-bottom: 20px;
 }
 
-.footer-content {
-    margin-right: 30px;
-}
-
 .footer-soc-item {
     width: 44px;
     height: 44px;
@@ -508,10 +504,71 @@ img {
     background-color: var(--brend-color);
 }
 
+.footer-sending {
+    right: 0px;
+}
+
+.footer-modal-field {
+    display: flex;
+}
+
+.fotter-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    margin-right: 12px;
+    padding-left: 16px;
+    color: var(--light-color);
+    outline: none;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fotter-input:hover,
+.fotter-input:focus {
+    cursor: pointer;
+    border: 1px solid #2196f3;
+}
+
+.footer-sendign-icon {
+    fill: var(--light-color);
+    margin-left: 10px;
+
+}
+
+.footer-sending_btn {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: var(--brend-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    letter-spacing: 0.06em;
+    color: var(--light-color);
+    margin: 0 auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-sending_btn:hover,
+.footer-sending_btn:focus {
+    background-color: var(--brand-bg-color);
+}
+
 /* -------------------------------------PORTFOLIO = PF---------------------------------- */
 /* ---------------------------------------PF BUTTONS-------------------------------------*/
 
 .pf-hidden-title {
+    position: absolute;
     visibility: hidden;
     width: 1px;
     height: 1px;
@@ -523,11 +580,10 @@ img {
     margin-bottom: 50px;
     justify-content: center;
 }
+
 .pf-btn-item:not(:last-child) {
     margin-right: 8px;
 }
-
-/* .pf-btn-item {}  */
 
 .portfolio-btn {
     background: var(--backgrd-color);
@@ -635,7 +691,7 @@ button.current {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms, visibility 250ms;
+    transition: opacity 250ms, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
@@ -653,7 +709,7 @@ button.current {
     position: absolute;
     top: 50%;
     left: 50%;
-    transition: transform 250ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translate(-50%, -50%) scale(1);
     padding: 40px;
 }
@@ -675,7 +731,7 @@ button.current {
     left: 50%;
     transform: translate(-50%, -50%);
     fill: var(--main-color);
-    transition: fill 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon:hover,
@@ -702,6 +758,7 @@ button.current {
 .modal-label {
     display: block;
     margin-bottom: 4px;
+    color: var(--secondary-color);
 }
 
 .modal-input {
@@ -714,14 +771,18 @@ button.current {
     padding-right: 5px;
     background-color: var(--light-color);
     outline: none;
-    transition: border 250ms;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:valid {
+/* .modal-input:valid {
     border: 1px solid #2196f3;
 }
 
-/* .modal-input_not_required:invalid .modal-input_not_required:empty {
+.modal-input:valid + .modal-input_not_required:empty {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+} */
+
+/* .modal-input_not_required:valid {
     border: 1px solid rgba(33, 33, 33, 0.2);
 } */
 
@@ -734,7 +795,7 @@ button.current {
 .modal-field {
     position: relative;
     margin-bottom: 10px;
-    transition: fill 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-field:hover,
@@ -754,19 +815,24 @@ button.current {
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
-
     padding: 12px 16px;
     resize: none;
-    transition: border 250ms;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
 }
 
-.modal-text:valid {
+/* .modal-text:valid {
     border: 1px solid #2196f3;
-}
+} */
 
 .modal-text:placeholder-shown {
     border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-text::placeholder {
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .modal-text:not(:required) .modal-text:valid {
@@ -794,7 +860,7 @@ button.current {
     letter-spacing: 0.06em;
     color: var(--light-color);
     margin: 0 auto;
-    transition: background-color 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal_btn:hover,
@@ -807,15 +873,37 @@ button.current {
 }
 
 .modal-check_text {
+    color: var(--secondary-color);
     line-height: 24px;
     letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.modal-check_text_link {    
+.modal-check_text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    margin-right: 7px;
+}
+
+.modal-check_text_link {
     color: var(--brend-color);
+    text-decoration: underline;
 }
 
-.modal-field:nth-child(5)  {
+.modal-field:nth-child(5) {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+.modal-check:checked + .modal-check_text::before {
+    background-color: var(--brend-color);
+    border: none;
+    background-image: url(../images/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
