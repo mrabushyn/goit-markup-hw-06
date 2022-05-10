@@ -759,6 +759,7 @@ button.current {
     display: block;
     margin-bottom: 4px;
     color: var(--secondary-color);
+    font-size: 12px;
 }
 
 .modal-input {
@@ -868,6 +869,18 @@ button.current {
     background-color: var(--brand-bg-color);
 }
 
+.check-reletive {
+    position: relative;
+}
+
+.icon-check {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 16px;
+    fill: var(--light-color);
+}
+
 .modal-check {
     background-color: var(--brand-color);
 }
@@ -899,11 +912,14 @@ button.current {
     margin-top: 20px;
     margin-bottom: 30px;
 }
+.modal-field:nth-child(5) :hover {
+    fill:var(--light-color);
+}
 
 .modal-check:checked + .modal-check_text::before {
     background-color: var(--brend-color);
     border: none;
-    background-image: url(../images/check.svg);
+    /* background-image: url(../images/check.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 }

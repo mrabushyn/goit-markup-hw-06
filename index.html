@@ -596,11 +596,15 @@
                             />
                             <button class="footer-sending_btn" type="submit">
                                 Подписаться
-                                <svg class="footer-sendign-icon" width="24" height="24">
-                                <use
-                                    href="images/symbol-defs.svg#icon-send"
-                                ></use>
-                            </svg>
+                                <svg
+                                    class="footer-sendign-icon"
+                                    width="24"
+                                    height="24"
+                                >
+                                    <use
+                                        href="images/symbol-defs.svg#icon-send"
+                                    ></use>
+                                </svg>
                             </button>
                         </div>
                     </form>
@@ -685,19 +689,27 @@
                     </div>
 
                     <div class="modal-field">
-                        <input
-                            type="checkbox"
-                            class="modal-check pf-hidden-title"
-                            id="modal-check"
-                            name="policy"
-                            value="policy"
-                        />
-                        <label for="modal-check" class="modal-check_text"
-                            >Соглашаюсь с рассылкой и принимаю
-                            <a href="" class="modal-check_text_link">
-                                Условия договора</a
-                            ></label
-                        >
+                        <div class="check-reletive">
+                            <svg class="icon-check" width="15" height="10">
+                                <use
+                                    href="./images/symbol-defs.svg#icon-check"
+                                ></use>
+                            </svg>
+                            <input
+                                type="checkbox"
+                                class="modal-check pf-hidden-title"
+                                id="modal-check"
+                                name="policy"
+                                value="policy"
+                                required
+                            />
+                            <label for="modal-check" class="modal-check_text"
+                                >Соглашаюсь с рассылкой и принимаю
+                                <a href="" class="modal-check_text_link">
+                                    Условия договора</a
+                                ></label
+                            >
+                        </div>
                     </div>
                     <button class="modal_btn" type="submit">Отправить</button>
                 </form>
